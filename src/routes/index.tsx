@@ -17,17 +17,72 @@ export const Route = createFileRoute("/")({
         content:
           "Cabinet de conseil indépendant pour dirigeants, conseils d'administration, gouvernements et régulateurs. Audit SI, gouvernance numérique, cybersécurité et IA — France & Afrique francophone.",
       },
-      { property: "og:title", content: "MUSETE Advisory" },
+      {
+        name: "keywords",
+        content:
+          "audit SI, gouvernance numérique, cybersécurité, conseil dirigeants, transformation digitale, data & IA, Afrique francophone, France, conseil d'administration, régulateur, DSI, RSSI",
+      },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "language", content: "fr-FR" },
+      { property: "og:site_name", content: "MUSETE Advisory" },
+      { property: "og:locale", content: "fr_FR" },
+      {
+        property: "og:title",
+        content:
+          "MUSETE Advisory — Audit SI, gouvernance & cybersécurité pour dirigeants",
+      },
       {
         property: "og:description",
         content:
           "Audit SI, gouvernance numérique et cybersécurité pour dirigeants — France & Afrique francophone.",
       },
+      { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+      {
+        name: "twitter:title",
+        content: "MUSETE Advisory — Conseil aux dirigeants",
+      },
+      {
+        name: "twitter:description",
+        content:
+          "Audit SI, gouvernance numérique et cybersécurité — France & Afrique francophone.",
+      },
     ],
     links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "MUSETE Advisory",
+          description:
+            "Cabinet de conseil indépendant en audit SI, gouvernance numérique, cybersécurité, data & IA pour dirigeants, conseils d'administration, gouvernements et régulateurs.",
+          areaServed: [
+            { "@type": "Country", name: "France" },
+            { "@type": "Place", name: "Afrique francophone" },
+          ],
+          knowsAbout: [
+            "Audit des systèmes d'information",
+            "Gouvernance numérique",
+            "Cybersécurité",
+            "Data & Intelligence Artificielle",
+            "Transformation digitale",
+            "Conseil aux dirigeants",
+          ],
+          serviceType: [
+            "Audit SI",
+            "Gouvernance numérique",
+            "Cybersécurité",
+            "Data & IA",
+          ],
+        }),
+      },
+    ],
   }),
 });
+
 
 const nav = [
   { label: "Cabinet", href: "#cabinet" },
