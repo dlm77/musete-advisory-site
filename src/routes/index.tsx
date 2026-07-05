@@ -316,7 +316,7 @@ function Cabinet() {
             <p>
               Nous parlons le langage des dirigeants, des conseils, des DSI, des RSSI, des auditeurs,
               des régulateurs et des bailleurs. Une décision numérique n'est jamais seulement technique.
-              elle engage la stratégie, les finances, la conformité et, parfois, la responsabilité
+              Elle engage la stratégie, les finances, la conformité et, parfois, la responsabilité
               personnelle des dirigeants.
             </p>
           </div>
