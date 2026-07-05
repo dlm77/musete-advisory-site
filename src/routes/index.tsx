@@ -548,14 +548,9 @@ function Principes() {
         </div>
 
         <div className="grid gap-x-16 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-          {items.map((p, i) => (
+          {items.map((p) => (
             <div key={p.title} className="border-t border-navy-deep/15 pt-6">
-              <div className="mb-4 flex items-baseline justify-between">
-                <h3 className="font-display text-3xl">{p.title}</h3>
-                <span className="font-mono text-xs text-gold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
+              <h3 className="mb-4 font-display text-3xl">{p.title}</h3>
               <p className="leading-relaxed text-navy-deep/70">{p.body}</p>
             </div>
           ))}
