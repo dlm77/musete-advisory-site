@@ -228,7 +228,7 @@ function Hero() {
         {/* Top eyebrow */}
         <div className="animate-fade flex flex-wrap items-center gap-4 text-cream/70">
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-gold">Cabinet indépendant · Paris · Afrique francophone</span>
+          <span className="eyebrow text-gold">Cabinet indépendant · Europe · Afrique francophone</span>
         </div>
 
         {/* Headline */}
