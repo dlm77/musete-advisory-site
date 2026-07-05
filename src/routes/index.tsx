@@ -382,16 +382,13 @@ function Questions() {
             </h2>
 
             <div className="mt-12 divide-y divide-cream/10 border-y border-cream/10">
-              {items.map((it) => (
-                <details key={it.n} className="group py-6" open={it.n === "01"}>
+              {items.map((it, i) => (
+                <details key={it.q} className="group py-6" open={i === 0}>
                   <summary className="flex cursor-pointer items-center justify-between gap-6 list-none">
-                    <div className="flex items-baseline gap-6">
-                      <span className="font-mono text-sm text-gold">{it.n}</span>
-                      <span className="font-display text-2xl italic md:text-3xl">{it.q}</span>
-                    </div>
+                    <span className="font-display text-2xl italic md:text-3xl">{it.q}</span>
                     <span className="text-2xl text-gold transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <p className="mt-4 max-w-2xl pl-14 text-cream/70">{it.a}</p>
+                  <p className="mt-4 max-w-2xl text-cream/70">{it.a}</p>
                 </details>
               ))}
             </div>
