@@ -621,15 +621,12 @@ function Secteurs() {
           </h2>
         </div>
         <ul className="md:col-span-8">
-          {items.map((s, i) => (
+          {items.map((s) => (
             <li
               key={s}
               className="group flex items-center justify-between gap-8 border-b border-cream/10 py-6 transition-colors hover:border-gold"
             >
-              <div className="flex items-baseline gap-8">
-                <span className="font-mono text-xs text-gold">{String(i + 1).padStart(2, "0")}</span>
-                <span className="font-display text-2xl md:text-3xl">{s}</span>
-              </div>
+              <span className="font-display text-2xl md:text-3xl">{s}</span>
               <span className="text-gold opacity-0 transition-opacity group-hover:opacity-100">→</span>
             </li>
           ))}
