@@ -10,12 +10,12 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "MUSETE Advisory — Audit SI, gouvernance & cybersécurité pour dirigeants",
+          "MUSETE Advisory | Audit SI, gouvernance & cybersécurité pour dirigeants",
       },
       {
         name: "description",
         content:
-          "Cabinet de conseil indépendant pour dirigeants, conseils d'administration, gouvernements et régulateurs. Audit SI, gouvernance numérique, cybersécurité et IA — France & Afrique francophone.",
+          "Cabinet de conseil indépendant pour dirigeants, conseils d'administration, gouvernements et régulateurs. Audit SI, gouvernance numérique, cybersécurité et IA en France et en Afrique francophone.",
       },
       {
         name: "keywords",
@@ -29,24 +29,24 @@ export const Route = createFileRoute("/")({
       {
         property: "og:title",
         content:
-          "MUSETE Advisory — Audit SI, gouvernance & cybersécurité pour dirigeants",
+          "MUSETE Advisory | Audit SI, gouvernance & cybersécurité pour dirigeants",
       },
       {
         property: "og:description",
         content:
-          "Audit SI, gouvernance numérique et cybersécurité pour dirigeants — France & Afrique francophone.",
+          "Audit SI, gouvernance numérique et cybersécurité pour dirigeants en France et en Afrique francophone.",
       },
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "MUSETE Advisory — Conseil aux dirigeants",
+        content: "MUSETE Advisory | Conseil aux dirigeants",
       },
       {
         name: "twitter:description",
         content:
-          "Audit SI, gouvernance numérique et cybersécurité — France & Afrique francophone.",
+          "Audit SI, gouvernance numérique et cybersécurité pour dirigeants en France et en Afrique francophone.",
       },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -559,7 +559,7 @@ function Principes() {
     { title: "Vision dirigeante", body: "Des recommandations formulées pour aider les directions générales et les conseils à décider." },
     { title: "Rigueur", body: "Référentiels reconnus, preuves, constats documentés et recommandations actionnables." },
     { title: "Confidentialité", body: "Discrétion, protection des informations sensibles et confiance comme principes de travail." },
-    { title: "Transfert", body: "Nous aidons vos équipes à monter en compétence — pas seulement à recevoir un rapport." },
+    { title: "Transfert", body: "Nous aidons vos équipes à monter en compétence, pas seulement à recevoir un rapport." },
   ];
 
   return (
@@ -597,7 +597,7 @@ function Fondations() {
     { title: "Expérience de Direction Générale", tag: "Décision & gouvernance", body: "Pilotage d'organisation, transformation numérique, arbitrages budgétaires, dialogue avec conseils, tutelles, régulateurs et bailleurs." },
     { title: "CISA", tag: "Audit & assurance", body: "Audit des systèmes d'information, contrôle interne, maîtrise des risques SI, évaluation des dispositifs de gouvernance." },
     { title: "COBIT 2019", tag: "Gouvernance & valeur", body: "Pilotage du numérique, alignement stratégie / SI, performance IT, indicateurs et création de valeur." },
-    { title: "Data & IA", tag: "Cloud, data, IA", body: "Architectures data, pipelines ETL/ELT, cloud, API et systèmes d'IA — pour auditer avec une lecture stratégique et conformité." },
+    { title: "Data & IA", tag: "Cloud, data, IA", body: "Architectures data, pipelines ETL/ELT, cloud, API et systèmes d'IA pour auditer avec une lecture stratégique et conformité." },
   ];
 
   return (
