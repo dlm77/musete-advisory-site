@@ -403,13 +403,13 @@ function Questions() {
 
 function Expertises() {
   const items = [
-    { n: "I", title: "Gouvernance numérique pour dirigeants", body: "Modèles de gouvernance, comités, arbitrages, tableaux de bord, reporting exécutif et alignement technologie / risques / stratégie." },
-    { n: "II", title: "Audit SI & assurance numérique", body: "Évaluation indépendante des systèmes, processus, risques et contrôles selon CISA, COBIT, ISO 27001 et NIST CSF." },
-    { n: "III", title: "Cybersécurité & résilience", body: "Analyse de risques, PSSI, continuité d'activité, gestion de crise, protection des actifs critiques." },
-    { n: "IV", title: "e-Gov & transformation publique", body: "Services publics numériques, gouvernance des plateformes, interopérabilité, identité numérique, cloud gouvernemental." },
-    { n: "V", title: "Données, cloud & IA", body: "Gouvernance des données, revue d'architecture, sécurisation cloud, maîtrise des risques liés à l'IA." },
-    { n: "VI", title: "Conformité & réglementation", body: "Mise en conformité RGPD, NIS2, DORA, AI Act, ISO 27001 et exigences sectorielles." },
-    { n: "VII", title: "Infrastructures critiques", body: "Audit, gouvernance et sécurisation des datacenters, réseaux et plateformes numériques essentielles." },
+    { title: "Gouvernance numérique pour dirigeants", body: "Modèles de gouvernance, comités, arbitrages, tableaux de bord, reporting exécutif et alignement technologie / risques / stratégie." },
+    { title: "Audit SI & assurance numérique", body: "Évaluation indépendante des systèmes, processus, risques et contrôles selon CISA, COBIT, ISO 27001 et NIST CSF." },
+    { title: "Cybersécurité & résilience", body: "Analyse de risques, PSSI, continuité d'activité, gestion de crise, protection des actifs critiques." },
+    { title: "e-Gov & transformation publique", body: "Services publics numériques, gouvernance des plateformes, interopérabilité, identité numérique, cloud gouvernemental." },
+    { title: "Données, cloud & IA", body: "Gouvernance des données, revue d'architecture, sécurisation cloud, maîtrise des risques liés à l'IA." },
+    { title: "Conformité & réglementation", body: "Mise en conformité RGPD, NIS2, DORA, AI Act, ISO 27001 et exigences sectorielles." },
+    { title: "Infrastructures critiques", body: "Audit, gouvernance et sécurisation des datacenters, réseaux et plateformes numériques essentielles." },
   ];
 
   return (
