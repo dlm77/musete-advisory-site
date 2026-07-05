@@ -431,17 +431,11 @@ function Expertises() {
         <div className="grid grid-cols-1 border-t border-navy-deep/10 md:grid-cols-2 lg:grid-cols-3">
           {items.map((e, i) => (
             <article
-              key={e.n}
+              key={e.title}
               className={`group relative border-b border-navy-deep/10 p-10 transition-colors hover:bg-navy-deep hover:text-cream ${
                 i % 3 !== 2 ? "lg:border-r" : ""
               } ${i % 2 !== 1 ? "md:border-r lg:border-r-0" : ""} ${i % 3 !== 2 ? "lg:border-r" : ""}`}
             >
-              <div className="mb-8 flex items-center justify-between">
-                <span className="font-display text-2xl italic text-gold">{e.n}</span>
-                <span className="eyebrow text-navy-deep/50 group-hover:text-cream/50">
-                  {String(i + 1).padStart(2, "0")} / 07
-                </span>
-              </div>
               <h3 className="mb-4 font-display text-3xl leading-tight">{e.title}</h3>
               <p className="text-sm leading-relaxed text-navy-deep/70 group-hover:text-cream/70">{e.body}</p>
               <span className="mt-10 inline-flex h-px w-8 bg-gold transition-all duration-500 group-hover:w-16" />
