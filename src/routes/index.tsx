@@ -140,11 +140,12 @@ function Index() {
 /* ────────────────────────────────────────── Navigation */
 
 function TopNav() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-navy-deep/10 bg-cream/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="#top" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="MUSETE Advisory" className="h-10 w-auto" />
+      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:h-20 md:px-10">
+        <a href="#top" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <img src={logoAsset.url} alt="MUSETE Advisory" className="h-8 w-auto md:h-10" />
         </a>
         <nav className="hidden items-center gap-10 lg:flex">
           {nav.map((n) => (
@@ -156,6 +157,41 @@ function TopNav() {
               {n.label}
             </a>
           ))}
+        </nav>
+        <button
+          type="button"
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="inline-flex h-10 w-10 items-center justify-center text-navy-deep lg:hidden"
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+      {/* Mobile dropdown */}
+      <div
+        className={`overflow-hidden border-t border-navy-deep/10 bg-cream/95 backdrop-blur-xl transition-[max-height,opacity] duration-300 lg:hidden ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col px-5 py-4">
+          {nav.map((n) => (
+            <a
+              key={n.href}
+              href={n.href}
+              onClick={() => setOpen(false)}
+              className="eyebrow border-b border-navy-deep/10 py-4 text-navy-deep/80 last:border-b-0 hover:text-gold"
+            >
+              {n.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="eyebrow mt-4 inline-flex items-center justify-center bg-navy-deep px-6 py-3 text-cream"
+          >
+            Prendre contact
+          </a>
         </nav>
       </div>
     </header>
