@@ -335,22 +335,18 @@ function Cabinet() {
 function Questions() {
   const items = [
     {
-      n: "01",
       q: "Quels sont nos vrais risques numériques ?",
       a: "Vulnérabilités, dépendances critiques, écarts de gouvernance, risques cyber, data et conformité.",
     },
     {
-      n: "02",
       q: "Nos dispositifs de contrôle sont-ils suffisants ?",
       a: "Politiques, processus, responsabilités, contrôles internes, prestataires, architectures et reporting.",
     },
     {
-      n: "03",
       q: "Que devons-nous prioriser ?",
       a: "Transformer les constats techniques en décisions de direction : priorités, budgets, délais.",
     },
     {
-      n: "04",
       q: "Comment démontrer notre maîtrise ?",
       a: "Preuves, tableaux de bord, rapports exécutifs et feuilles de route pour conseils, régulateurs et bailleurs.",
     },
