@@ -508,7 +508,7 @@ function Prestations() {
           <h2 className="mt-6 max-w-5xl font-display text-5xl leading-[1] md:text-7xl lg:text-8xl">
             Nous ne livrons pas seulement des rapports.
             <br />
-            <span className="italic text-gold">nous outillons la décision.</span>
+            <span className="italic text-gold">Nous outillons la décision.</span>
           </h2>
           <p className="mt-10 max-w-2xl text-lg text-cream/70 md:text-xl">
             Six formats de mission conçus pour les dirigeants, les conseils d'administration et les
