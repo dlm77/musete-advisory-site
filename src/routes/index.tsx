@@ -501,19 +501,14 @@ function Prestations() {
       <div className="bg-cream py-24">
         <div className="mx-auto max-w-[1400px] px-6 md:px-16">
           <div className="grid gap-px bg-navy-deep/10 md:grid-cols-2 lg:grid-cols-3">
-            {items.map((p, i) => (
+            {items.map((p) => (
               <article
                 key={p.title}
                 className="group relative flex flex-col justify-between bg-cream p-10 transition-colors hover:bg-bone"
               >
                 <div>
-                  <div className="mb-6 flex items-center justify-between">
-                    <span className="eyebrow text-gold">{p.tag}</span>
-                    <span className="font-mono text-xs text-navy-deep/40">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <h3 className="mb-5 font-display text-3xl leading-tight">{p.title}</h3>
+                  <span className="eyebrow text-gold">{p.tag}</span>
+                  <h3 className="mb-5 mt-6 font-display text-3xl leading-tight">{p.title}</h3>
                   <p className="text-navy-deep/70">{p.body}</p>
                 </div>
                 <div className="mt-12 flex items-center justify-between">
