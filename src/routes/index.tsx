@@ -316,7 +316,7 @@ function Cabinet() {
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <aside className="md:col-span-4">
           <Eyebrow>01 · Le cabinet</Eyebrow>
-          <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
             Une expertise conçue pour <span className="italic text-gold">aider les dirigeants à décider</span>.
           </h2>
 
@@ -415,7 +415,7 @@ function Questions() {
 
           <div className="md:col-span-7 md:pl-8">
             <Eyebrow tone="gold">02 · Notre promesse</Eyebrow>
-            <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
               Aider les dirigeants à répondre à <span className="italic text-gold">quatre questions simples</span>.
             </h2>
 
@@ -456,7 +456,7 @@ function Expertises() {
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
             <Eyebrow>03 · Expertises</Eyebrow>
-            <h2 className="mt-6 max-w-[18ch] font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 max-w-[18ch] font-display text-4xl leading-[1.05] md:text-6xl">
               Sept domaines, un même <span className="italic text-gold">fil directeur</span>.
             </h2>
           </div>
@@ -523,7 +523,7 @@ function Prestations() {
         <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/50 to-navy-deep" />
         <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1400px] flex-col justify-center px-6 py-20 md:py-32 md:px-16">
           <Eyebrow tone="gold">04 · Prestations</Eyebrow>
-          <h2 className="mt-6 max-w-5xl font-display text-5xl leading-[1] md:text-7xl lg:text-8xl">
+          <h2 className="mt-6 max-w-5xl font-display text-4xl leading-[1.05] md:text-7xl lg:text-8xl">
             Nous ne livrons pas seulement des rapports.
             <br />
             <span className="italic text-gold">Nous outillons la décision.</span>
@@ -580,7 +580,7 @@ function Principes() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16">
           <Eyebrow>05 · Principes</Eyebrow>
-          <h2 className="mt-6 max-w-[24ch] font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 max-w-[24ch] font-display text-4xl leading-[1.05] md:text-6xl">
             La manière dont <span className="italic text-gold">nous travaillons</span>.
           </h2>
         </div>
@@ -614,7 +614,7 @@ function Fondations() {
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
             <Eyebrow>06 · Fondations professionnelles</Eyebrow>
-            <h2 className="mt-6 max-w-[26ch] font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 max-w-[26ch] font-display text-4xl leading-[1.05] md:text-6xl">
               Un socle rare : <span className="italic text-gold">décision, audit, gouvernance</span> & technique.
             </h2>
           </div>
@@ -654,7 +654,7 @@ function Secteurs() {
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-4">
           <Eyebrow tone="gold">07 · Secteurs</Eyebrow>
-          <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
             Les secteurs que <span className="italic text-gold">nous accompagnons</span>.
           </h2>
         </div>
@@ -691,7 +691,7 @@ function References() {
       <div className="mx-auto grid max-w-[1400px] gap-20 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-5">
           <Eyebrow>08 · Missions & références</Eyebrow>
-          <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
             Des <span className="italic text-gold">références</span> qui parlent à voix basse.
           </h2>
           <div className="mt-10 space-y-6 leading-relaxed text-navy-deep/80">
@@ -754,7 +754,7 @@ function Insights() {
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
             <Eyebrow>09 · Insights</Eyebrow>
-            <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
               Publications & <span className="italic text-gold">analyses</span>.
             </h2>
           </div>
@@ -800,7 +800,7 @@ function Contact() {
         <div className="grid gap-20 md:grid-cols-12">
           <div className="md:col-span-6">
             <Eyebrow tone="gold">10 · Contact</Eyebrow>
-            <h2 className="mt-6 font-display text-6xl leading-[0.98] md:text-8xl">
+            <h2 className="mt-6 font-display text-5xl leading-[1] md:text-8xl">
               Parlons de
               <br />
               <span className="italic text-gold">votre projet</span>.
