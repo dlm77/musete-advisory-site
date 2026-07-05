@@ -678,16 +678,12 @@ function References() {
 
         <div className="md:col-span-7">
           <div className="border border-navy-deep/15 bg-bone">
-            <div className="flex items-center justify-between border-b border-navy-deep/15 px-8 py-5">
+            <div className="border-b border-navy-deep/15 px-8 py-5">
               <span className="eyebrow text-gold">Dossier confidentiel</span>
-              <span className="font-mono text-xs text-navy-deep/50">Extrait · 08.1</span>
             </div>
             <dl className="divide-y divide-navy-deep/10">
-              {refs.map(([label, val], i) => (
-                <div key={label} className="grid grid-cols-[auto_1fr] items-baseline gap-6 px-8 py-6 md:grid-cols-[80px_1fr_auto]">
-                  <span className="font-mono text-xs text-gold">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+              {refs.map(([label, val]) => (
+                <div key={label} className="flex items-baseline justify-between gap-6 px-8 py-6">
                   <div>
                     <dt className="font-display text-xl md:text-2xl">{label}</dt>
                     <dd className="mt-1 text-sm text-navy-deep/60">{val}</dd>
