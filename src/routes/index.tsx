@@ -727,17 +727,12 @@ function Insights() {
         </div>
 
         <div className="grid gap-px bg-navy-deep/10 md:grid-cols-3">
-          {items.map((it, i) => (
+          {items.map((it) => (
             <article
               key={it.title}
               className="group flex min-h-[380px] flex-col justify-between bg-cream p-10 transition-colors hover:bg-navy-deep hover:text-cream"
             >
-              <div className="flex items-center justify-between">
-                <span className="eyebrow text-gold">{it.tag}</span>
-                <span className="font-mono text-xs text-navy-deep/50 group-hover:text-cream/60">
-                  {String(i + 1).padStart(2, "0")} / 03
-                </span>
-              </div>
+              <span className="eyebrow text-gold">{it.tag}</span>
               <div>
                 <h3 className="font-display text-3xl leading-tight md:text-4xl">{it.title}</h3>
                 <div className="mt-8 flex items-center justify-between">
