@@ -369,7 +369,7 @@ function Questions() {
               />
               <div className="absolute inset-0 bg-navy-deep/20" />
               <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-cream/70">
-                <span className="eyebrow">Fig. 02.1</span>
+                <span className="eyebrow">Musete Advisory</span>
                 <span className="eyebrow">Structure & décision</span>
               </div>
             </div>
