@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 const logoAsset = { url: "/musete-logo.png" };
 import heroBoardroom from "@/assets/hero-boardroom.jpg";
 import architecture from "@/assets/section-architecture.jpg";
