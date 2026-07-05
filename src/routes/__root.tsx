@@ -77,7 +77,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       {
         title:
-          "MUSETE Advisory — Audit SI, gouvernance numérique & cybersécurité pour dirigeants",
+          "MUSETE Advisory | Audit SI, gouvernance numérique & cybersécurité pour dirigeants",
       },
       {
         name: "description",
@@ -87,7 +87,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: "MUSETE Advisory" },
       {
         property: "og:title",
-        content: "MUSETE Advisory — Conseil aux dirigeants",
+        content: "MUSETE Advisory | Conseil aux dirigeants",
       },
       {
         property: "og:description",
