@@ -804,6 +804,16 @@ function Contact() {
                 <span className="eyebrow">Envoyer ma demande</span>
                 <span className="h-px w-8 bg-navy-deep transition-all group-hover:w-16" />
               </button>
+              <p className="mt-6 text-xs leading-relaxed text-cream/50">
+                Les données personnelles communiquées sont utilisées uniquement pour répondre à votre
+                demande. Elles ne sont ni cédées, ni conservées au-delà du traitement nécessaire. Vous
+                disposez d'un droit d'accès, de rectification et de suppression. Pour exercer ce droit,
+                écrivez à{" "}
+                <a href="mailto:contact@musete-advisory.com" className="underline hover:text-gold">
+                  contact@musete-advisory.com
+                </a>
+                .
+              </p>
             </form>
           </div>
         </div>
