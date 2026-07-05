@@ -155,13 +155,6 @@ function TopNav() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="group relative inline-flex items-center gap-3 bg-navy-deep px-5 py-3 text-cream transition-colors hover:bg-gold hover:text-navy-deep"
-        >
-          <span className="eyebrow">Prendre contact</span>
-          <span className="inline-block h-px w-6 bg-gold transition-all duration-300 group-hover:w-10 group-hover:bg-navy-deep" />
-        </a>
       </div>
     </header>
   );
