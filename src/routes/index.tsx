@@ -1,4 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 const logoAsset = { url: "/musete-logo.png" };
 import heroBoardroom from "@/assets/hero-boardroom.jpg";
 import architecture from "@/assets/section-architecture.jpg";
@@ -138,11 +140,12 @@ function Index() {
 /* ────────────────────────────────────────── Navigation */
 
 function TopNav() {
+  const [open, setOpen] = useState(false);
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-navy-deep/10 bg-cream/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10">
-        <a href="#top" className="flex items-center gap-3">
-          <img src={logoAsset.url} alt="MUSETE Advisory" className="h-10 w-auto" />
+      <div className="mx-auto flex h-16 max-w-[1400px] items-center justify-between px-5 md:h-20 md:px-10">
+        <a href="#top" className="flex items-center gap-3" onClick={() => setOpen(false)}>
+          <img src={logoAsset.url} alt="MUSETE Advisory" className="h-8 w-auto md:h-10" />
         </a>
         <nav className="hidden items-center gap-10 lg:flex">
           {nav.map((n) => (
@@ -154,6 +157,41 @@ function TopNav() {
               {n.label}
             </a>
           ))}
+        </nav>
+        <button
+          type="button"
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={open}
+          onClick={() => setOpen((v) => !v)}
+          className="inline-flex h-10 w-10 items-center justify-center text-navy-deep lg:hidden"
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+      {/* Mobile dropdown */}
+      <div
+        className={`overflow-hidden border-t border-navy-deep/10 bg-cream/95 backdrop-blur-xl transition-[max-height,opacity] duration-300 lg:hidden ${
+          open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <nav className="flex flex-col px-5 py-4">
+          {nav.map((n) => (
+            <a
+              key={n.href}
+              href={n.href}
+              onClick={() => setOpen(false)}
+              className="eyebrow border-b border-navy-deep/10 py-4 text-navy-deep/80 last:border-b-0 hover:text-gold"
+            >
+              {n.label}
+            </a>
+          ))}
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="eyebrow mt-4 inline-flex items-center justify-center bg-navy-deep px-6 py-3 text-cream"
+          >
+            Prendre contact
+          </a>
         </nav>
       </div>
     </header>
@@ -190,7 +228,7 @@ function Hero() {
         {/* Top eyebrow */}
         <div className="animate-fade flex flex-wrap items-center gap-4 text-cream/70">
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-gold">Cabinet indépendant · Paris · Afrique francophone</span>
+          <span className="eyebrow text-gold">Cabinet indépendant · Europe · Afrique francophone</span>
         </div>
 
         {/* Headline */}
@@ -274,11 +312,11 @@ function MarqueeBar() {
 
 function Cabinet() {
   return (
-    <section id="cabinet" className="relative bg-cream py-32">
+    <section id="cabinet" className="relative bg-cream py-20 md:py-32">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <aside className="md:col-span-4">
           <Eyebrow>01 · Le cabinet</Eyebrow>
-          <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
             Une expertise conçue pour <span className="italic text-gold">aider les dirigeants à décider</span>.
           </h2>
 
@@ -353,7 +391,7 @@ function Questions() {
   ];
 
   return (
-    <section className="relative bg-navy-deep py-32 text-cream">
+    <section className="relative bg-navy-deep py-20 md:py-32 text-cream">
       {/* Architecture image inset */}
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="grid gap-16 md:grid-cols-12">
@@ -377,7 +415,7 @@ function Questions() {
 
           <div className="md:col-span-7 md:pl-8">
             <Eyebrow tone="gold">02 · Notre promesse</Eyebrow>
-            <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
               Aider les dirigeants à répondre à <span className="italic text-gold">quatre questions simples</span>.
             </h2>
 
@@ -413,12 +451,12 @@ function Expertises() {
   ];
 
   return (
-    <section id="expertises" className="bg-cream py-32">
+    <section id="expertises" className="bg-cream py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
             <Eyebrow>03 · Expertises</Eyebrow>
-            <h2 className="mt-6 max-w-[18ch] font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 max-w-[18ch] font-display text-4xl leading-[1.05] md:text-6xl">
               Sept domaines, un même <span className="italic text-gold">fil directeur</span>.
             </h2>
           </div>
@@ -483,9 +521,9 @@ function Prestations() {
           height={1088}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/50 to-navy-deep" />
-        <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1400px] flex-col justify-center px-6 py-32 md:px-16">
+        <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1400px] flex-col justify-center px-6 py-20 md:py-32 md:px-16">
           <Eyebrow tone="gold">04 · Prestations</Eyebrow>
-          <h2 className="mt-6 max-w-5xl font-display text-5xl leading-[1] md:text-7xl lg:text-8xl">
+          <h2 className="mt-6 max-w-5xl font-display text-4xl leading-[1.05] md:text-7xl lg:text-8xl">
             Nous ne livrons pas seulement des rapports.
             <br />
             <span className="italic text-gold">Nous outillons la décision.</span>
@@ -498,7 +536,7 @@ function Prestations() {
       </div>
 
       {/* Cards */}
-      <div className="bg-cream py-24">
+      <div className="bg-cream py-16 md:py-24">
         <div className="mx-auto max-w-[1400px] px-6 md:px-16">
           <div className="grid gap-px bg-navy-deep/10 md:grid-cols-2 lg:grid-cols-3">
             {items.map((p) => (
@@ -538,11 +576,11 @@ function Principes() {
   ];
 
   return (
-    <section className="bg-bone py-32">
+    <section className="bg-bone py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16">
           <Eyebrow>05 · Principes</Eyebrow>
-          <h2 className="mt-6 max-w-[24ch] font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 max-w-[24ch] font-display text-4xl leading-[1.05] md:text-6xl">
             La manière dont <span className="italic text-gold">nous travaillons</span>.
           </h2>
         </div>
@@ -571,12 +609,12 @@ function Fondations() {
   ];
 
   return (
-    <section className="bg-cream py-32">
+    <section className="bg-cream py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
             <Eyebrow>06 · Fondations professionnelles</Eyebrow>
-            <h2 className="mt-6 max-w-[26ch] font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 max-w-[26ch] font-display text-4xl leading-[1.05] md:text-6xl">
               Un socle rare : <span className="italic text-gold">décision, audit, gouvernance</span> & technique.
             </h2>
           </div>
@@ -612,11 +650,11 @@ function Secteurs() {
   ];
 
   return (
-    <section className="bg-navy-deep py-32 text-cream">
+    <section className="bg-navy-deep py-20 md:py-32 text-cream">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-4">
           <Eyebrow tone="gold">07 · Secteurs</Eyebrow>
-          <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
             Les secteurs que <span className="italic text-gold">nous accompagnons</span>.
           </h2>
         </div>
@@ -649,11 +687,11 @@ function References() {
   ] as const;
 
   return (
-    <section id="references" className="bg-cream py-32">
+    <section id="references" className="bg-cream py-20 md:py-32">
       <div className="mx-auto grid max-w-[1400px] gap-20 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-5">
           <Eyebrow>08 · Missions & références</Eyebrow>
-          <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+          <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
             Des <span className="italic text-gold">références</span> qui parlent à voix basse.
           </h2>
           <div className="mt-10 space-y-6 leading-relaxed text-navy-deep/80">
@@ -711,12 +749,12 @@ function Insights() {
   ];
 
   return (
-    <section id="insights" className="bg-bone py-32">
+    <section id="insights" className="bg-bone py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
             <Eyebrow>09 · Insights</Eyebrow>
-            <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
+            <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
               Publications & <span className="italic text-gold">analyses</span>.
             </h2>
           </div>
@@ -754,7 +792,7 @@ function Insights() {
 
 function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden bg-navy-deep py-32 text-cream">
+    <section id="contact" className="relative overflow-hidden bg-navy-deep py-20 md:py-32 text-cream">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
 
@@ -762,7 +800,7 @@ function Contact() {
         <div className="grid gap-20 md:grid-cols-12">
           <div className="md:col-span-6">
             <Eyebrow tone="gold">10 · Contact</Eyebrow>
-            <h2 className="mt-6 font-display text-6xl leading-[0.98] md:text-8xl">
+            <h2 className="mt-6 font-display text-5xl leading-[1] md:text-8xl">
               Parlons de
               <br />
               <span className="italic text-gold">votre projet</span>.
