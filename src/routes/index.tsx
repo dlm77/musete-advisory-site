@@ -335,22 +335,18 @@ function Cabinet() {
 function Questions() {
   const items = [
     {
-      n: "01",
       q: "Quels sont nos vrais risques numériques ?",
       a: "Vulnérabilités, dépendances critiques, écarts de gouvernance, risques cyber, data et conformité.",
     },
     {
-      n: "02",
       q: "Nos dispositifs de contrôle sont-ils suffisants ?",
       a: "Politiques, processus, responsabilités, contrôles internes, prestataires, architectures et reporting.",
     },
     {
-      n: "03",
       q: "Que devons-nous prioriser ?",
       a: "Transformer les constats techniques en décisions de direction : priorités, budgets, délais.",
     },
     {
-      n: "04",
       q: "Comment démontrer notre maîtrise ?",
       a: "Preuves, tableaux de bord, rapports exécutifs et feuilles de route pour conseils, régulateurs et bailleurs.",
     },
@@ -373,7 +369,7 @@ function Questions() {
               />
               <div className="absolute inset-0 bg-navy-deep/20" />
               <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between text-cream/70">
-                <span className="eyebrow">Fig. 02.1</span>
+                <span className="eyebrow">Musete Advisory</span>
                 <span className="eyebrow">Structure & décision</span>
               </div>
             </div>
@@ -386,16 +382,13 @@ function Questions() {
             </h2>
 
             <div className="mt-12 divide-y divide-cream/10 border-y border-cream/10">
-              {items.map((it) => (
-                <details key={it.n} className="group py-6" open={it.n === "01"}>
+              {items.map((it, i) => (
+                <details key={it.q} className="group py-6" open={i === 0}>
                   <summary className="flex cursor-pointer items-center justify-between gap-6 list-none">
-                    <div className="flex items-baseline gap-6">
-                      <span className="font-mono text-sm text-gold">{it.n}</span>
-                      <span className="font-display text-2xl italic md:text-3xl">{it.q}</span>
-                    </div>
+                    <span className="font-display text-2xl italic md:text-3xl">{it.q}</span>
                     <span className="text-2xl text-gold transition-transform group-open:rotate-45">+</span>
                   </summary>
-                  <p className="mt-4 max-w-2xl pl-14 text-cream/70">{it.a}</p>
+                  <p className="mt-4 max-w-2xl text-cream/70">{it.a}</p>
                 </details>
               ))}
             </div>
@@ -410,13 +403,13 @@ function Questions() {
 
 function Expertises() {
   const items = [
-    { n: "I", title: "Gouvernance numérique pour dirigeants", body: "Modèles de gouvernance, comités, arbitrages, tableaux de bord, reporting exécutif et alignement technologie / risques / stratégie." },
-    { n: "II", title: "Audit SI & assurance numérique", body: "Évaluation indépendante des systèmes, processus, risques et contrôles selon CISA, COBIT, ISO 27001 et NIST CSF." },
-    { n: "III", title: "Cybersécurité & résilience", body: "Analyse de risques, PSSI, continuité d'activité, gestion de crise, protection des actifs critiques." },
-    { n: "IV", title: "e-Gov & transformation publique", body: "Services publics numériques, gouvernance des plateformes, interopérabilité, identité numérique, cloud gouvernemental." },
-    { n: "V", title: "Données, cloud & IA", body: "Gouvernance des données, revue d'architecture, sécurisation cloud, maîtrise des risques liés à l'IA." },
-    { n: "VI", title: "Conformité & réglementation", body: "Mise en conformité RGPD, NIS2, DORA, AI Act, ISO 27001 et exigences sectorielles." },
-    { n: "VII", title: "Infrastructures critiques", body: "Audit, gouvernance et sécurisation des datacenters, réseaux et plateformes numériques essentielles." },
+    { title: "Gouvernance numérique pour dirigeants", body: "Modèles de gouvernance, comités, arbitrages, tableaux de bord, reporting exécutif et alignement technologie / risques / stratégie." },
+    { title: "Audit SI & assurance numérique", body: "Évaluation indépendante des systèmes, processus, risques et contrôles selon CISA, COBIT, ISO 27001 et NIST CSF." },
+    { title: "Cybersécurité & résilience", body: "Analyse de risques, PSSI, continuité d'activité, gestion de crise, protection des actifs critiques." },
+    { title: "e-Gov & transformation publique", body: "Services publics numériques, gouvernance des plateformes, interopérabilité, identité numérique, cloud gouvernemental." },
+    { title: "Données, cloud & IA", body: "Gouvernance des données, revue d'architecture, sécurisation cloud, maîtrise des risques liés à l'IA." },
+    { title: "Conformité & réglementation", body: "Mise en conformité RGPD, NIS2, DORA, AI Act, ISO 27001 et exigences sectorielles." },
+    { title: "Infrastructures critiques", body: "Audit, gouvernance et sécurisation des datacenters, réseaux et plateformes numériques essentielles." },
   ];
 
   return (
@@ -438,17 +431,11 @@ function Expertises() {
         <div className="grid grid-cols-1 border-t border-navy-deep/10 md:grid-cols-2 lg:grid-cols-3">
           {items.map((e, i) => (
             <article
-              key={e.n}
+              key={e.title}
               className={`group relative border-b border-navy-deep/10 p-10 transition-colors hover:bg-navy-deep hover:text-cream ${
                 i % 3 !== 2 ? "lg:border-r" : ""
               } ${i % 2 !== 1 ? "md:border-r lg:border-r-0" : ""} ${i % 3 !== 2 ? "lg:border-r" : ""}`}
             >
-              <div className="mb-8 flex items-center justify-between">
-                <span className="font-display text-2xl italic text-gold">{e.n}</span>
-                <span className="eyebrow text-navy-deep/50 group-hover:text-cream/50">
-                  {String(i + 1).padStart(2, "0")} / 07
-                </span>
-              </div>
               <h3 className="mb-4 font-display text-3xl leading-tight">{e.title}</h3>
               <p className="text-sm leading-relaxed text-navy-deep/70 group-hover:text-cream/70">{e.body}</p>
               <span className="mt-10 inline-flex h-px w-8 bg-gold transition-all duration-500 group-hover:w-16" />
@@ -514,19 +501,14 @@ function Prestations() {
       <div className="bg-cream py-24">
         <div className="mx-auto max-w-[1400px] px-6 md:px-16">
           <div className="grid gap-px bg-navy-deep/10 md:grid-cols-2 lg:grid-cols-3">
-            {items.map((p, i) => (
+            {items.map((p) => (
               <article
                 key={p.title}
                 className="group relative flex flex-col justify-between bg-cream p-10 transition-colors hover:bg-bone"
               >
                 <div>
-                  <div className="mb-6 flex items-center justify-between">
-                    <span className="eyebrow text-gold">{p.tag}</span>
-                    <span className="font-mono text-xs text-navy-deep/40">
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                  <h3 className="mb-5 font-display text-3xl leading-tight">{p.title}</h3>
+                  <span className="eyebrow text-gold">{p.tag}</span>
+                  <h3 className="mb-5 mt-6 font-display text-3xl leading-tight">{p.title}</h3>
                   <p className="text-navy-deep/70">{p.body}</p>
                 </div>
                 <div className="mt-12 flex items-center justify-between">
@@ -566,14 +548,9 @@ function Principes() {
         </div>
 
         <div className="grid gap-x-16 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-          {items.map((p, i) => (
+          {items.map((p) => (
             <div key={p.title} className="border-t border-navy-deep/15 pt-6">
-              <div className="mb-4 flex items-baseline justify-between">
-                <h3 className="font-display text-3xl">{p.title}</h3>
-                <span className="font-mono text-xs text-gold">
-                  {String(i + 1).padStart(2, "0")}
-                </span>
-              </div>
+              <h3 className="mb-4 font-display text-3xl">{p.title}</h3>
               <p className="leading-relaxed text-navy-deep/70">{p.body}</p>
             </div>
           ))}
@@ -644,15 +621,12 @@ function Secteurs() {
           </h2>
         </div>
         <ul className="md:col-span-8">
-          {items.map((s, i) => (
+          {items.map((s) => (
             <li
               key={s}
               className="group flex items-center justify-between gap-8 border-b border-cream/10 py-6 transition-colors hover:border-gold"
             >
-              <div className="flex items-baseline gap-8">
-                <span className="font-mono text-xs text-gold">{String(i + 1).padStart(2, "0")}</span>
-                <span className="font-display text-2xl md:text-3xl">{s}</span>
-              </div>
+              <span className="font-display text-2xl md:text-3xl">{s}</span>
               <span className="text-gold opacity-0 transition-opacity group-hover:opacity-100">→</span>
             </li>
           ))}
@@ -704,16 +678,12 @@ function References() {
 
         <div className="md:col-span-7">
           <div className="border border-navy-deep/15 bg-bone">
-            <div className="flex items-center justify-between border-b border-navy-deep/15 px-8 py-5">
+            <div className="border-b border-navy-deep/15 px-8 py-5">
               <span className="eyebrow text-gold">Dossier confidentiel</span>
-              <span className="font-mono text-xs text-navy-deep/50">Extrait · 08.1</span>
             </div>
             <dl className="divide-y divide-navy-deep/10">
-              {refs.map(([label, val], i) => (
-                <div key={label} className="grid grid-cols-[auto_1fr] items-baseline gap-6 px-8 py-6 md:grid-cols-[80px_1fr_auto]">
-                  <span className="font-mono text-xs text-gold">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
+              {refs.map(([label, val]) => (
+                <div key={label} className="flex items-baseline justify-between gap-6 px-8 py-6">
                   <div>
                     <dt className="font-display text-xl md:text-2xl">{label}</dt>
                     <dd className="mt-1 text-sm text-navy-deep/60">{val}</dd>
@@ -757,17 +727,12 @@ function Insights() {
         </div>
 
         <div className="grid gap-px bg-navy-deep/10 md:grid-cols-3">
-          {items.map((it, i) => (
+          {items.map((it) => (
             <article
               key={it.title}
               className="group flex min-h-[380px] flex-col justify-between bg-cream p-10 transition-colors hover:bg-navy-deep hover:text-cream"
             >
-              <div className="flex items-center justify-between">
-                <span className="eyebrow text-gold">{it.tag}</span>
-                <span className="font-mono text-xs text-navy-deep/50 group-hover:text-cream/60">
-                  {String(i + 1).padStart(2, "0")} / 03
-                </span>
-              </div>
+              <span className="eyebrow text-gold">{it.tag}</span>
               <div>
                 <h3 className="font-display text-3xl leading-tight md:text-4xl">{it.title}</h3>
                 <div className="mt-8 flex items-center justify-between">
