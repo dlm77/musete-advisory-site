@@ -197,7 +197,7 @@ function Hero() {
         {/* Top eyebrow */}
         <div className="animate-fade flex flex-wrap items-center gap-4 text-cream/70">
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-gold">Cabinet indépendant · Paris — Afrique francophone</span>
+          <span className="eyebrow text-gold">Cabinet indépendant · Paris · Afrique francophone</span>
         </div>
 
         {/* Headline */}
@@ -211,7 +211,7 @@ function Hero() {
           </h1>
           <p className="mt-10 max-w-2xl text-lg leading-relaxed text-cream/75 md:text-xl">
             Audit SI, gouvernance numérique et cybersécurité pour dirigeants, conseils d'administration,
-            gouvernements et régulateurs — entre la France et l'Afrique francophone.
+            gouvernements et régulateurs, entre la France et l'Afrique francophone.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-6">
@@ -284,7 +284,7 @@ function Cabinet() {
     <section id="cabinet" className="relative bg-cream py-32">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <aside className="md:col-span-4">
-          <Eyebrow>01 — Le cabinet</Eyebrow>
+          <Eyebrow>01 · Le cabinet</Eyebrow>
           <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
             Une expertise conçue pour <span className="italic text-gold">aider les dirigeants à décider</span>.
           </h2>
@@ -315,7 +315,7 @@ function Cabinet() {
             </p>
             <p>
               Nous parlons le langage des dirigeants, des conseils, des DSI, des RSSI, des auditeurs,
-              des régulateurs et des bailleurs. Une décision numérique n'est jamais seulement technique —
+              des régulateurs et des bailleurs. Une décision numérique n'est jamais seulement technique.
               elle engage la stratégie, les finances, la conformité et, parfois, la responsabilité
               personnelle des dirigeants.
             </p>
@@ -387,7 +387,7 @@ function Questions() {
           </div>
 
           <div className="md:col-span-7 md:pl-8">
-            <Eyebrow tone="gold">02 — Notre promesse</Eyebrow>
+            <Eyebrow tone="gold">02 · Notre promesse</Eyebrow>
             <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
               Aider les dirigeants à répondre à <span className="italic text-gold">quatre questions simples</span>.
             </h2>
@@ -431,13 +431,13 @@ function Expertises() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
-            <Eyebrow>03 — Expertises</Eyebrow>
+            <Eyebrow>03 · Expertises</Eyebrow>
             <h2 className="mt-6 max-w-[18ch] font-display text-5xl leading-[1.02] md:text-6xl">
               Sept domaines, un même <span className="italic text-gold">fil directeur</span>.
             </h2>
           </div>
           <p className="max-w-sm text-navy-deep/70">
-            Outiller la décision — pour que la gouvernance numérique cesse d'être un angle mort du
+            Outiller la décision pour que la gouvernance numérique cesse d'être un angle mort du
             comité exécutif.
           </p>
         </div>
@@ -504,9 +504,9 @@ function Prestations() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/50 to-navy-deep" />
         <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1400px] flex-col justify-center px-6 py-32 md:px-16">
-          <Eyebrow tone="gold">04 — Prestations</Eyebrow>
+          <Eyebrow tone="gold">04 · Prestations</Eyebrow>
           <h2 className="mt-6 max-w-5xl font-display text-5xl leading-[1] md:text-7xl lg:text-8xl">
-            Nous ne livrons pas seulement des rapports —
+            Nous ne livrons pas seulement des rapports.
             <br />
             <span className="italic text-gold">nous outillons la décision.</span>
           </h2>
@@ -566,7 +566,7 @@ function Principes() {
     <section className="bg-bone py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16">
-          <Eyebrow>05 — Principes</Eyebrow>
+          <Eyebrow>05 · Principes</Eyebrow>
           <h2 className="mt-6 max-w-[24ch] font-display text-5xl leading-[1.02] md:text-6xl">
             La manière dont <span className="italic text-gold">nous travaillons</span>.
           </h2>
@@ -605,7 +605,7 @@ function Fondations() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
-            <Eyebrow>06 — Fondations professionnelles</Eyebrow>
+            <Eyebrow>06 · Fondations professionnelles</Eyebrow>
             <h2 className="mt-6 max-w-[26ch] font-display text-5xl leading-[1.02] md:text-6xl">
               Un socle rare : <span className="italic text-gold">décision, audit, gouvernance</span> & technique.
             </h2>
@@ -645,7 +645,7 @@ function Secteurs() {
     <section className="bg-navy-deep py-32 text-cream">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-4">
-          <Eyebrow tone="gold">07 — Secteurs</Eyebrow>
+          <Eyebrow tone="gold">07 · Secteurs</Eyebrow>
           <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
             Les secteurs que <span className="italic text-gold">nous accompagnons</span>.
           </h2>
@@ -685,7 +685,7 @@ function References() {
     <section id="references" className="bg-cream py-32">
       <div className="mx-auto grid max-w-[1400px] gap-20 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-5">
-          <Eyebrow>08 — Missions & références</Eyebrow>
+          <Eyebrow>08 · Missions & références</Eyebrow>
           <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
             Des <span className="italic text-gold">références</span> qui parlent à voix basse.
           </h2>
@@ -752,13 +752,13 @@ function Insights() {
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
-            <Eyebrow>09 — Insights</Eyebrow>
+            <Eyebrow>09 · Insights</Eyebrow>
             <h2 className="mt-6 font-display text-5xl leading-[1.02] md:text-6xl">
               Publications & <span className="italic text-gold">analyses</span>.
             </h2>
           </div>
           <p className="max-w-md text-navy-deep/70">
-            Nos analyses sur l'audit SI, la gouvernance numérique et la cybersécurité — pour les
+            Nos analyses sur l'audit SI, la gouvernance numérique et la cybersécurité pour les
             dirigeants en France et en Afrique francophone.
           </p>
         </div>
@@ -803,7 +803,7 @@ function Contact() {
       <div className="relative mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="grid gap-20 md:grid-cols-12">
           <div className="md:col-span-6">
-            <Eyebrow tone="gold">10 — Contact</Eyebrow>
+            <Eyebrow tone="gold">10 · Contact</Eyebrow>
             <h2 className="mt-6 font-display text-6xl leading-[0.98] md:text-8xl">
               Parlons de
               <br />
