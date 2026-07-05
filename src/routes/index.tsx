@@ -312,7 +312,7 @@ function MarqueeBar() {
 
 function Cabinet() {
   return (
-    <section id="cabinet" className="relative bg-cream py-32">
+    <section id="cabinet" className="relative bg-cream py-20 md:py-32">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <aside className="md:col-span-4">
           <Eyebrow>01 · Le cabinet</Eyebrow>
@@ -391,7 +391,7 @@ function Questions() {
   ];
 
   return (
-    <section className="relative bg-navy-deep py-32 text-cream">
+    <section className="relative bg-navy-deep py-20 md:py-32 text-cream">
       {/* Architecture image inset */}
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="grid gap-16 md:grid-cols-12">
@@ -451,7 +451,7 @@ function Expertises() {
   ];
 
   return (
-    <section id="expertises" className="bg-cream py-32">
+    <section id="expertises" className="bg-cream py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
@@ -521,7 +521,7 @@ function Prestations() {
           height={1088}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy-deep/70 via-navy-deep/50 to-navy-deep" />
-        <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1400px] flex-col justify-center px-6 py-32 md:px-16">
+        <div className="relative z-10 mx-auto flex min-h-[70svh] max-w-[1400px] flex-col justify-center px-6 py-20 md:py-32 md:px-16">
           <Eyebrow tone="gold">04 · Prestations</Eyebrow>
           <h2 className="mt-6 max-w-5xl font-display text-5xl leading-[1] md:text-7xl lg:text-8xl">
             Nous ne livrons pas seulement des rapports.
@@ -536,7 +536,7 @@ function Prestations() {
       </div>
 
       {/* Cards */}
-      <div className="bg-cream py-24">
+      <div className="bg-cream py-16 md:py-24">
         <div className="mx-auto max-w-[1400px] px-6 md:px-16">
           <div className="grid gap-px bg-navy-deep/10 md:grid-cols-2 lg:grid-cols-3">
             {items.map((p) => (
@@ -576,7 +576,7 @@ function Principes() {
   ];
 
   return (
-    <section className="bg-bone py-32">
+    <section className="bg-bone py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16">
           <Eyebrow>05 · Principes</Eyebrow>
@@ -609,7 +609,7 @@ function Fondations() {
   ];
 
   return (
-    <section className="bg-cream py-32">
+    <section className="bg-cream py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6">
           <div>
@@ -650,7 +650,7 @@ function Secteurs() {
   ];
 
   return (
-    <section className="bg-navy-deep py-32 text-cream">
+    <section className="bg-navy-deep py-20 md:py-32 text-cream">
       <div className="mx-auto grid max-w-[1400px] gap-16 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-4">
           <Eyebrow tone="gold">07 · Secteurs</Eyebrow>
@@ -687,7 +687,7 @@ function References() {
   ] as const;
 
   return (
-    <section id="references" className="bg-cream py-32">
+    <section id="references" className="bg-cream py-20 md:py-32">
       <div className="mx-auto grid max-w-[1400px] gap-20 px-6 md:grid-cols-12 md:px-16">
         <div className="md:col-span-5">
           <Eyebrow>08 · Missions & références</Eyebrow>
@@ -749,7 +749,7 @@ function Insights() {
   ];
 
   return (
-    <section id="insights" className="bg-bone py-32">
+    <section id="insights" className="bg-bone py-20 md:py-32">
       <div className="mx-auto max-w-[1400px] px-6 md:px-16">
         <div className="mb-16 flex flex-wrap items-end justify-between gap-6 border-b border-navy-deep/15 pb-8">
           <div>
@@ -792,7 +792,7 @@ function Insights() {
 
 function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden bg-navy-deep py-32 text-cream">
+    <section id="contact" className="relative overflow-hidden bg-navy-deep py-20 md:py-32 text-cream">
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
 
