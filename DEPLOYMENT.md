@@ -80,5 +80,32 @@ Le contenu prêt à héberger sur GitHub Pages, S3, Netlify statique, etc. est d
 
 ## Variables d'environnement
 
-Aucune variable secrète n'est requise pour ce site vitrine.
-Si vous ajoutez des intégrations (formulaire de contact, analytics, etc.), déclarez-les dans le tableau de bord de votre hébergeur.
+| Variable | Requise | Rôle |
+| --- | --- | --- |
+| `NITRO_PRESET` | selon l'hébergeur | Cible de build Nitro (voir ci-dessus) |
+| `RESEND_API_KEY` | oui | Envoi des messages du formulaire de contact |
+
+### Formulaire de contact
+
+Le formulaire poste vers la route serveur `POST /api/contact`
+(`src/routes/api/contact.ts`), qui envoie le message à **contact@musete-advisory.com**
+via [Resend](https://resend.com). L'adresse du visiteur est placée en `reply_to`,
+donc une simple réponse dans la boîte mail lui parvient directement.
+
+Mise en place :
+
+1. Créer un compte sur [resend.com](https://resend.com) (gratuit jusqu'à 3 000 mails/mois).
+2. **Domains → Add domain** : ajouter `musete-advisory.com` et créer les enregistrements
+   DNS indiqués (SPF, DKIM, DMARC) chez le registrar. Sans domaine vérifié, Resend
+   refuse l'envoi depuis `site@musete-advisory.com`.
+3. **API Keys → Create** : générer une clé, puis l'ajouter dans
+   **Vercel → Project Settings → Environment Variables** sous le nom `RESEND_API_KEY`.
+4. Redéployer.
+
+En local, créer un fichier `.env` (non versionné) contenant `RESEND_API_KEY=re_...`.
+Sans clé, la route répond `500` et le formulaire affiche un message d'erreur invitant
+à écrire directement à contact@musete-advisory.com — aucun message n'est perdu
+silencieusement.
+
+L'expéditeur (`site@musete-advisory.com`) et le destinataire sont définis en haut de
+`src/routes/api/contact.ts`.

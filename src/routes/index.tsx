@@ -11,8 +11,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "MUSETE Advisory | Audit SI, gouvernance & cybersécurité pour dirigeants",
+        title: "MUSETE Advisory | Audit SI, gouvernance & cybersécurité pour dirigeants",
       },
       {
         name: "description",
@@ -30,8 +29,7 @@ export const Route = createFileRoute("/")({
       { property: "og:locale", content: "fr_FR" },
       {
         property: "og:title",
-        content:
-          "MUSETE Advisory | Audit SI, gouvernance & cybersécurité pour dirigeants",
+        content: "MUSETE Advisory | Audit SI, gouvernance & cybersécurité pour dirigeants",
       },
       {
         property: "og:description",
@@ -73,18 +71,12 @@ export const Route = createFileRoute("/")({
             "Transformation digitale",
             "Conseil aux dirigeants",
           ],
-          serviceType: [
-            "Audit SI",
-            "Gouvernance numérique",
-            "Cybersécurité",
-            "Data & IA",
-          ],
+          serviceType: ["Audit SI", "Gouvernance numérique", "Cybersécurité", "Data & IA"],
         }),
       },
     ],
   }),
 });
-
 
 const nav = [
   { label: "Cabinet", href: "#cabinet" },
@@ -108,7 +100,13 @@ function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
   );
 }
 
-function Eyebrow({ children, tone = "gold" }: { children: React.ReactNode; tone?: "gold" | "navy" | "cream" }) {
+function Eyebrow({
+  children,
+  tone = "gold",
+}: {
+  children: React.ReactNode;
+  tone?: "gold" | "navy" | "cream";
+}) {
   const color =
     tone === "gold" ? "text-gold" : tone === "navy" ? "text-navy-deep/70" : "text-cream/70";
   return <span className={`eyebrow ${color}`}>{children}</span>;
@@ -202,7 +200,10 @@ function TopNav() {
 
 function Hero() {
   return (
-    <section id="top" className="relative min-h-[100svh] w-full overflow-hidden bg-navy-deep text-cream">
+    <section
+      id="top"
+      className="relative min-h-[100svh] w-full overflow-hidden bg-navy-deep text-cream"
+    >
       {/* Background image */}
       <div className="absolute inset-0">
         <img
@@ -228,7 +229,9 @@ function Hero() {
         {/* Top eyebrow */}
         <div className="animate-fade flex flex-wrap items-center gap-4 text-cream/70">
           <span className="h-px w-10 bg-gold" />
-          <span className="eyebrow text-gold">Cabinet indépendant · Europe · Afrique francophone</span>
+          <span className="eyebrow text-gold">
+            Cabinet indépendant · Europe · Afrique francophone
+          </span>
         </div>
 
         {/* Headline */}
@@ -241,8 +244,9 @@ function Hero() {
             de cause.
           </h1>
           <p className="mt-10 max-w-2xl text-lg leading-relaxed text-cream/75 md:text-xl">
-            Audit SI, gouvernance numérique et cybersécurité pour dirigeants, conseils d'administration,
-            gouvernements et régulateurs, entre la France et l'Afrique francophone.
+            Audit SI, gouvernance numérique et cybersécurité pour dirigeants, conseils
+            d'administration, gouvernements et régulateurs, entre la France et l'Afrique
+            francophone.
           </p>
 
           <div className="mt-12 flex flex-wrap items-center gap-6">
@@ -317,7 +321,8 @@ function Cabinet() {
         <aside className="md:col-span-4">
           <Eyebrow>01 · Le cabinet</Eyebrow>
           <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
-            Une expertise conçue pour <span className="italic text-gold">aider les dirigeants à décider</span>.
+            Une expertise conçue pour{" "}
+            <span className="italic text-gold">aider les dirigeants à décider</span>.
           </h2>
 
           <div className="mt-12 border border-navy-deep/10 bg-bone p-8">
@@ -340,22 +345,24 @@ function Cabinet() {
             </p>
             <p>
               Notre singularité repose sur une expérience rarement réunie :{" "}
-              <strong className="font-semibold">ancien Directeur Général d'un opérateur public national</strong>,
-              membre de Conseil d'administration, praticien des infrastructures critiques, de la
+              <strong className="font-semibold">
+                ancien Directeur Général d'un opérateur public national
+              </strong>
+              , membre de Conseil d'administration, praticien des infrastructures critiques, de la
               cybersécurité, de l'e-Gov, de la data et de l'IA.
             </p>
             <p>
-              Nous parlons le langage des dirigeants, des conseils, des DSI, des RSSI, des auditeurs,
-              des régulateurs et des bailleurs. Une décision numérique n'est jamais seulement technique.
-              Elle engage la stratégie, les finances, la conformité et, parfois, la responsabilité
-              personnelle des dirigeants.
+              Nous parlons le langage des dirigeants, des conseils, des DSI, des RSSI, des
+              auditeurs, des régulateurs et des bailleurs. Une décision numérique n'est jamais
+              seulement technique. Elle engage la stratégie, les finances, la conformité et,
+              parfois, la responsabilité personnelle des dirigeants.
             </p>
           </div>
 
           <blockquote className="mt-16 border-l-2 border-gold pl-8">
             <p className="font-display text-3xl italic leading-tight md:text-4xl">
-              « Notre métier : produire des diagnostics clairs, des arbitrages compréhensibles et des
-              feuilles de route actionnables. »
+              « Notre métier : produire des diagnostics clairs, des arbitrages compréhensibles et
+              des feuilles de route actionnables. »
             </p>
             <footer className="mt-6 flex items-center gap-3">
               <span className="h-px w-10 bg-gold" />
@@ -416,7 +423,8 @@ function Questions() {
           <div className="md:col-span-7 md:pl-8">
             <Eyebrow tone="gold">02 · Notre promesse</Eyebrow>
             <h2 className="mt-6 font-display text-4xl leading-[1.05] md:text-6xl">
-              Aider les dirigeants à répondre à <span className="italic text-gold">quatre questions simples</span>.
+              Aider les dirigeants à répondre à{" "}
+              <span className="italic text-gold">quatre questions simples</span>.
             </h2>
 
             <div className="mt-12 divide-y divide-cream/10 border-y border-cream/10">
@@ -424,7 +432,9 @@ function Questions() {
                 <details key={it.q} className="group py-6" open={i === 0}>
                   <summary className="flex cursor-pointer items-center justify-between gap-6 list-none">
                     <span className="font-display text-2xl italic md:text-3xl">{it.q}</span>
-                    <span className="text-2xl text-gold transition-transform group-open:rotate-45">+</span>
+                    <span className="text-2xl text-gold transition-transform group-open:rotate-45">
+                      +
+                    </span>
                   </summary>
                   <p className="mt-4 max-w-2xl text-cream/70">{it.a}</p>
                 </details>
@@ -441,13 +451,34 @@ function Questions() {
 
 function Expertises() {
   const items = [
-    { title: "Gouvernance numérique pour dirigeants", body: "Modèles de gouvernance, comités, arbitrages, tableaux de bord, reporting exécutif et alignement technologie / risques / stratégie." },
-    { title: "Audit SI & assurance numérique", body: "Évaluation indépendante des systèmes, processus, risques et contrôles selon CISA, COBIT, ISO 27001 et NIST CSF." },
-    { title: "Cybersécurité & résilience", body: "Analyse de risques, PSSI, continuité d'activité, gestion de crise, protection des actifs critiques." },
-    { title: "e-Gov & transformation publique", body: "Services publics numériques, gouvernance des plateformes, interopérabilité, identité numérique, cloud gouvernemental." },
-    { title: "Données, cloud & IA", body: "Gouvernance des données, revue d'architecture, sécurisation cloud, maîtrise des risques liés à l'IA." },
-    { title: "Conformité & réglementation", body: "Mise en conformité RGPD, NIS2, DORA, AI Act, ISO 27001 et exigences sectorielles." },
-    { title: "Infrastructures critiques", body: "Audit, gouvernance et sécurisation des datacenters, réseaux et plateformes numériques essentielles." },
+    {
+      title: "Gouvernance numérique pour dirigeants",
+      body: "Modèles de gouvernance, comités, arbitrages, tableaux de bord, reporting exécutif et alignement technologie / risques / stratégie.",
+    },
+    {
+      title: "Audit SI & assurance numérique",
+      body: "Évaluation indépendante des systèmes, processus, risques et contrôles selon CISA, COBIT, ISO 27001 et NIST CSF.",
+    },
+    {
+      title: "Cybersécurité & résilience",
+      body: "Analyse de risques, PSSI, continuité d'activité, gestion de crise, protection des actifs critiques.",
+    },
+    {
+      title: "e-Gov & transformation publique",
+      body: "Services publics numériques, gouvernance des plateformes, interopérabilité, identité numérique, cloud gouvernemental.",
+    },
+    {
+      title: "Données, cloud & IA",
+      body: "Gouvernance des données, revue d'architecture, sécurisation cloud, maîtrise des risques liés à l'IA.",
+    },
+    {
+      title: "Conformité & réglementation",
+      body: "Mise en conformité RGPD, NIS2, DORA, AI Act, ISO 27001 et exigences sectorielles.",
+    },
+    {
+      title: "Infrastructures critiques",
+      body: "Audit, gouvernance et sécurisation des datacenters, réseaux et plateformes numériques essentielles.",
+    },
   ];
 
   return (
@@ -475,7 +506,9 @@ function Expertises() {
               } ${i % 2 !== 1 ? "md:border-r lg:border-r-0" : ""} ${i % 3 !== 2 ? "lg:border-r" : ""}`}
             >
               <h3 className="mb-4 font-display text-3xl leading-tight">{e.title}</h3>
-              <p className="text-sm leading-relaxed text-navy-deep/70 group-hover:text-cream/70">{e.body}</p>
+              <p className="text-sm leading-relaxed text-navy-deep/70 group-hover:text-cream/70">
+                {e.body}
+              </p>
               <span className="mt-10 inline-flex h-px w-8 bg-gold transition-all duration-500 group-hover:w-16" />
             </article>
           ))}
@@ -500,12 +533,36 @@ function Expertises() {
 
 function Prestations() {
   const items = [
-    { tag: "Diagnostic", title: "Diagnostic exécutif des risques numériques", body: "Lecture claire des principaux risques SI, cyber, data, IA et conformité, avec priorités de décision." },
-    { tag: "Gouvernance", title: "Audit de gouvernance SI", body: "Évaluation des responsabilités, comités, politiques, contrôles, budgets et redevabilité." },
-    { tag: "Pilotage", title: "Tableau de bord cyber pour COMEX", body: "Indicateurs compréhensibles par les dirigeants : risques majeurs, incidents, conformité, dette technique." },
-    { tag: "Revue", title: "Revue de projets numériques critiques", body: "Risques, gouvernance, prestataires, budgets, architecture et capacité de mise en œuvre." },
-    { tag: "Temps partagé", title: "Accompagnement RSSI / Audit SI", body: "Appui récurrent aux dirigeants pour piloter sécurité, risques, conformité et plans d'action." },
-    { tag: "Data & IA", title: "Gouvernance des données & IA", body: "Architectures data, cloud, qualité, traçabilité, risques algorithmiques, AI Act / RGPD." },
+    {
+      tag: "Diagnostic",
+      title: "Diagnostic exécutif des risques numériques",
+      body: "Lecture claire des principaux risques SI, cyber, data, IA et conformité, avec priorités de décision.",
+    },
+    {
+      tag: "Gouvernance",
+      title: "Audit de gouvernance SI",
+      body: "Évaluation des responsabilités, comités, politiques, contrôles, budgets et redevabilité.",
+    },
+    {
+      tag: "Pilotage",
+      title: "Tableau de bord cyber pour COMEX",
+      body: "Indicateurs compréhensibles par les dirigeants : risques majeurs, incidents, conformité, dette technique.",
+    },
+    {
+      tag: "Revue",
+      title: "Revue de projets numériques critiques",
+      body: "Risques, gouvernance, prestataires, budgets, architecture et capacité de mise en œuvre.",
+    },
+    {
+      tag: "Temps partagé",
+      title: "Accompagnement RSSI / Audit SI",
+      body: "Appui récurrent aux dirigeants pour piloter sécurité, risques, conformité et plans d'action.",
+    },
+    {
+      tag: "Data & IA",
+      title: "Gouvernance des données & IA",
+      body: "Architectures data, cloud, qualité, traçabilité, risques algorithmiques, AI Act / RGPD.",
+    },
   ];
 
   return (
@@ -568,11 +625,26 @@ function Prestations() {
 
 function Principes() {
   const items = [
-    { title: "Indépendance", body: "Un regard d'auditeur, sans conflit d'intérêts avec un éditeur ou un intégrateur." },
-    { title: "Vision dirigeante", body: "Des recommandations formulées pour aider les directions générales et les conseils à décider." },
-    { title: "Rigueur", body: "Référentiels reconnus, preuves, constats documentés et recommandations actionnables." },
-    { title: "Confidentialité", body: "Discrétion, protection des informations sensibles et confiance comme principes de travail." },
-    { title: "Transfert", body: "Nous aidons vos équipes à monter en compétence, pas seulement à recevoir un rapport." },
+    {
+      title: "Indépendance",
+      body: "Un regard d'auditeur, sans conflit d'intérêts avec un éditeur ou un intégrateur.",
+    },
+    {
+      title: "Vision dirigeante",
+      body: "Des recommandations formulées pour aider les directions générales et les conseils à décider.",
+    },
+    {
+      title: "Rigueur",
+      body: "Référentiels reconnus, preuves, constats documentés et recommandations actionnables.",
+    },
+    {
+      title: "Confidentialité",
+      body: "Discrétion, protection des informations sensibles et confiance comme principes de travail.",
+    },
+    {
+      title: "Transfert",
+      body: "Nous aidons vos équipes à monter en compétence, pas seulement à recevoir un rapport.",
+    },
   ];
 
   return (
@@ -602,10 +674,26 @@ function Principes() {
 
 function Fondations() {
   const items = [
-    { title: "Expérience de Direction Générale", tag: "Décision & gouvernance", body: "Pilotage d'organisation, transformation numérique, arbitrages budgétaires, dialogue avec conseils, tutelles, régulateurs et bailleurs." },
-    { title: "CISA", tag: "Audit & assurance", body: "Audit des systèmes d'information, contrôle interne, maîtrise des risques SI, évaluation des dispositifs de gouvernance." },
-    { title: "COBIT 2019", tag: "Gouvernance & valeur", body: "Pilotage du numérique, alignement stratégie / SI, performance IT, indicateurs et création de valeur." },
-    { title: "Data & IA", tag: "Cloud, data, IA", body: "Architectures data, pipelines ETL/ELT, cloud, API et systèmes d'IA pour auditer avec une lecture stratégique et conformité." },
+    {
+      title: "Expérience de Direction Générale",
+      tag: "Décision & gouvernance",
+      body: "Pilotage d'organisation, transformation numérique, arbitrages budgétaires, dialogue avec conseils, tutelles, régulateurs et bailleurs.",
+    },
+    {
+      title: "CISA",
+      tag: "Audit & assurance",
+      body: "Audit des systèmes d'information, contrôle interne, maîtrise des risques SI, évaluation des dispositifs de gouvernance.",
+    },
+    {
+      title: "COBIT 2019",
+      tag: "Gouvernance & valeur",
+      body: "Pilotage du numérique, alignement stratégie / SI, performance IT, indicateurs et création de valeur.",
+    },
+    {
+      title: "Data & IA",
+      tag: "Cloud, data, IA",
+      body: "Architectures data, pipelines ETL/ELT, cloud, API et systèmes d'IA pour auditer avec une lecture stratégique et conformité.",
+    },
   ];
 
   return (
@@ -615,7 +703,8 @@ function Fondations() {
           <div>
             <Eyebrow>06 · Fondations professionnelles</Eyebrow>
             <h2 className="mt-6 max-w-[26ch] font-display text-4xl leading-[1.05] md:text-6xl">
-              Un socle rare : <span className="italic text-gold">décision, audit, gouvernance</span> & technique.
+              Un socle rare : <span className="italic text-gold">décision, audit, gouvernance</span>{" "}
+              & technique.
             </h2>
           </div>
         </div>
@@ -665,7 +754,9 @@ function Secteurs() {
               className="group flex items-center justify-between gap-8 border-b border-cream/10 py-6 transition-colors hover:border-gold"
             >
               <span className="font-display text-2xl md:text-3xl">{s}</span>
-              <span className="text-gold opacity-0 transition-opacity group-hover:opacity-100">→</span>
+              <span className="text-gold opacity-0 transition-opacity group-hover:opacity-100">
+                →
+              </span>
             </li>
           ))}
         </ul>
@@ -701,8 +792,8 @@ function References() {
               et les programmes financés par des bailleurs internationaux.
             </p>
             <p className="text-navy-deep/60">
-              Pour des raisons de confidentialité, certaines références sont anonymisées ou présentées
-              uniquement sur demande, lors d'un échange sécurisé.
+              Pour des raisons de confidentialité, certaines références sont anonymisées ou
+              présentées uniquement sur demande, lors d'un échange sécurisé.
             </p>
           </div>
           <a
@@ -743,9 +834,21 @@ function References() {
 
 function Insights() {
   const items = [
-    { tag: "Gouvernance", date: "À paraître", title: "Gouvernance numérique en Afrique : par où commencer ?" },
-    { tag: "Audit", date: "À paraître", title: "CISA & COBIT 2019 : ce que change un audit indépendant." },
-    { tag: "Conformité", date: "À paraître", title: "AI Act, NIS2, DORA : ce que les conseils doivent anticiper." },
+    {
+      tag: "Gouvernance",
+      date: "À paraître",
+      title: "Gouvernance numérique en Afrique : par où commencer ?",
+    },
+    {
+      tag: "Audit",
+      date: "À paraître",
+      title: "CISA & COBIT 2019 : ce que change un audit indépendant.",
+    },
+    {
+      tag: "Conformité",
+      date: "À paraître",
+      title: "AI Act, NIS2, DORA : ce que les conseils doivent anticiper.",
+    },
   ];
 
   return (
@@ -792,7 +895,10 @@ function Insights() {
 
 function Contact() {
   return (
-    <section id="contact" className="relative overflow-hidden bg-navy-deep py-20 md:py-32 text-cream">
+    <section
+      id="contact"
+      className="relative overflow-hidden bg-navy-deep py-20 md:py-32 text-cream"
+    >
       <div className="pointer-events-none absolute -right-32 -top-32 h-96 w-96 rounded-full bg-gold/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-32 h-96 w-96 rounded-full bg-gold/5 blur-3xl" />
 
@@ -811,52 +917,115 @@ function Contact() {
             </p>
 
             <div className="mt-14 space-y-1">
-              <ContactRow tag="Email" v="contact@musete-advisory.com" href="mailto:contact@musete-advisory.com" />
-              <ContactRow tag="Téléphone" v="+33 6 65 01 61 57" href="tel:+33665016157" />
-              <ContactRow tag="LinkedIn" v="Profil Didier MUSETE" href="https://www.linkedin.com/in/didier-musete" />
+              <ContactRow
+                tag="Email"
+                v="contact@musete-advisory.com"
+                href="mailto:contact@musete-advisory.com"
+              />
+              <ContactRow
+                tag="LinkedIn"
+                v="Profil Didier MUSETE"
+                href="https://www.linkedin.com/in/didier-musete"
+              />
             </div>
           </div>
 
           <div className="md:col-span-6">
-            <form
-              className="border border-cream/15 bg-cream/[0.03] p-8 backdrop-blur md:p-10"
-              onSubmit={(e) => {
-                e.preventDefault();
-                window.location.href = "mailto:contact@musete-advisory.com";
-              }}
-            >
-              <div className="mb-8 flex items-center justify-between border-b border-cream/15 pb-4">
-                <span className="eyebrow text-gold">Formulaire de contact</span>
-                <span className="font-mono text-xs text-cream/50">Confidentiel</span>
-              </div>
-              <div className="space-y-6">
-                <Field label="Nom complet" name="name" type="text" required />
-                <Field label="Email professionnel" name="email" type="email" required />
-                <Field label="Organisation & fonction" name="org" type="text" />
-                <Field label="Votre besoin" name="msg" type="textarea" />
-              </div>
-              <button
-                type="submit"
-                className="group mt-10 flex w-full items-center justify-between bg-gold px-6 py-4 text-navy-deep transition-colors hover:bg-cream"
-              >
-                <span className="eyebrow">Envoyer ma demande</span>
-                <span className="h-px w-8 bg-navy-deep transition-all group-hover:w-16" />
-              </button>
-              <p className="mt-6 text-xs leading-relaxed text-cream/50">
-                Les données personnelles communiquées sont utilisées uniquement pour répondre à votre
-                demande. Elles ne sont ni cédées, ni conservées au-delà du traitement nécessaire. Vous
-                disposez d'un droit d'accès, de rectification et de suppression. Pour exercer ce droit,
-                écrivez à{" "}
-                <a href="mailto:contact@musete-advisory.com" className="underline hover:text-gold">
-                  contact@musete-advisory.com
-                </a>
-                .
-              </p>
-            </form>
+            <ContactForm />
           </div>
         </div>
       </div>
     </section>
+  );
+}
+
+function ContactForm() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    setStatus("sending");
+    setError("");
+    try {
+      const res = await fetch("/api/contact", { method: "POST", body: new FormData(form) });
+      const data = (await res.json().catch(() => null)) as { error?: string } | null;
+      if (!res.ok) throw new Error(data?.error ?? "L'envoi a échoué.");
+      form.reset();
+      setStatus("sent");
+    } catch (err) {
+      setError(
+        err instanceof Error && err.message
+          ? err.message
+          : "L'envoi a échoué. Réessayez ou écrivez-nous directement.",
+      );
+      setStatus("error");
+    }
+  }
+
+  return (
+    <form
+      className="border border-cream/15 bg-cream/[0.03] p-8 backdrop-blur md:p-10"
+      onSubmit={handleSubmit}
+    >
+      <div className="mb-8 flex items-center justify-between border-b border-cream/15 pb-4">
+        <span className="eyebrow text-gold">Formulaire de contact</span>
+        <span className="font-mono text-xs text-cream/50">Confidentiel</span>
+      </div>
+      <div className="space-y-6">
+        <Field label="Nom complet" name="name" type="text" required />
+        <Field label="Email professionnel" name="email" type="email" required />
+        <Field label="Organisation & fonction" name="org" type="text" />
+        <Field label="Votre besoin" name="msg" type="textarea" />
+      </div>
+      {/* Piège à robots : invisible et ignoré des lecteurs d'écran. */}
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+        className="absolute left-[-9999px] h-0 w-0 opacity-0"
+      />
+      <button
+        type="submit"
+        disabled={status === "sending"}
+        className="group mt-10 flex w-full items-center justify-between bg-gold px-6 py-4 text-navy-deep transition-colors hover:bg-cream disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        <span className="eyebrow">
+          {status === "sending" ? "Envoi en cours…" : "Envoyer ma demande"}
+        </span>
+        <span className="h-px w-8 bg-navy-deep transition-all group-hover:w-16" />
+      </button>
+      <p aria-live="polite" className="sr-only">
+        {status === "sent" ? "Message envoyé" : status === "error" ? error : ""}
+      </p>
+      {status === "sent" && (
+        <p className="mt-6 border-l-2 border-gold pl-4 text-sm leading-relaxed text-cream/80">
+          Merci, votre message est bien parti. Nous revenons vers vous rapidement, en toute
+          confidentialité.
+        </p>
+      )}
+      {status === "error" && (
+        <p className="mt-6 border-l-2 border-gold pl-4 text-sm leading-relaxed text-cream/80">
+          {error}{" "}
+          <a href="mailto:contact@musete-advisory.com" className="underline hover:text-gold">
+            contact@musete-advisory.com
+          </a>
+        </p>
+      )}
+      <p className="mt-6 text-xs leading-relaxed text-cream/50">
+        Les données personnelles communiquées sont utilisées uniquement pour répondre à votre
+        demande. Elles ne sont ni cédées, ni conservées au-delà du traitement nécessaire. Vous
+        disposez d'un droit d'accès, de rectification et de suppression. Pour exercer ce droit,
+        écrivez à{" "}
+        <a href="mailto:contact@musete-advisory.com" className="underline hover:text-gold">
+          contact@musete-advisory.com
+        </a>
+        .
+      </p>
+    </form>
   );
 }
 
@@ -868,7 +1037,9 @@ function ContactRow({ tag, v, href }: { tag: string; v: string; href: string }) 
     >
       <div className="flex items-baseline gap-6">
         <span className="eyebrow w-24 text-gold">{tag}</span>
-        <span className="font-display text-2xl italic text-cream group-hover:text-gold md:text-3xl">{v}</span>
+        <span className="font-display text-2xl italic text-cream group-hover:text-gold md:text-3xl">
+          {v}
+        </span>
       </div>
       <span className="text-gold opacity-0 transition-opacity group-hover:opacity-100">→</span>
     </a>
@@ -915,15 +1086,18 @@ function Footer() {
           <span className="eyebrow text-cream/40">Cabinet indépendant</span>
         </div>
         <div className="flex flex-wrap items-center gap-x-10 gap-y-3">
-          <a href="#" className="eyebrow hover:text-gold">Mentions légales</a>
-          <a href="#" className="eyebrow hover:text-gold">Confidentialité</a>
-          <a
-            href="https://www.linkedin.com/in/didier-musete"
-            className="eyebrow hover:text-gold"
-          >
+          <a href="#" className="eyebrow hover:text-gold">
+            Mentions légales
+          </a>
+          <a href="#" className="eyebrow hover:text-gold">
+            Confidentialité
+          </a>
+          <a href="https://www.linkedin.com/in/didier-musete" className="eyebrow hover:text-gold">
             LinkedIn
           </a>
-          <span className="eyebrow text-cream/30">© {new Date().getFullYear()} MUSETE Advisory</span>
+          <span className="eyebrow text-cream/30">
+            © {new Date().getFullYear()} MUSETE Advisory
+          </span>
         </div>
       </div>
     </footer>
