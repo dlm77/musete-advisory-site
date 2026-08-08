@@ -1,8 +1,8 @@
-# Déploiement hors Lovable
+# Déploiement
 
-Ce projet est une app **TanStack Start** (React 19 + Vite 7 + Nitro). Nitro peut cibler n'importe quel hébergeur via la variable d'environnement `NITRO_PRESET` au moment du build.
+Ce projet est une app **TanStack Start** (React 19 + Vite 8 + Nitro), sans dépendance à une plateforme propriétaire : la configuration Vite est entièrement dans `vite.config.ts`.
 
-Par défaut, le build cible Cloudflare Workers. Pour un autre hôte, il suffit de définir `NITRO_PRESET` avant `bun run build` (ou `npm run build`).
+Nitro détecte automatiquement l'hébergeur au moment du build (Vercel, Netlify, Cloudflare… via les variables d'environnement de leur CI). Pour forcer une cible, définir `NITRO_PRESET` avant `bun run build` (ou `npm run build`) — cela prend le pas sur la détection.
 
 ## Prérequis
 
@@ -13,7 +13,8 @@ Par défaut, le build cible Cloudflare Workers. Pour un autre hôte, il suffit d
 
 1. Importer le repo sur Vercel.
 2. Dans **Project Settings → Environment Variables**, ajouter :
-   - `NITRO_PRESET` = `vercel`
+   - `RESEND_API_KEY` — voir § Formulaire de contact
+   - `NITRO_PRESET` = `vercel` (facultatif : Nitro détecte Vercel seul, mais l'expliciter évite toute ambiguïté)
 3. Build command : `bun run build` (ou `npm run build`)
 4. Output directory : laisser vide — Nitro écrit automatiquement dans `.vercel/output` (format Build Output API v3, détecté par Vercel).
 5. Deploy.
