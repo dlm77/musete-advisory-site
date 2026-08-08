@@ -21,6 +21,14 @@ Nitro détecte automatiquement l'hébergeur au moment du build (Vercel, Netlify,
 
 Un fichier `vercel.json` minimal est fourni pour forcer le framework en "other" et laisser Nitro gérer la sortie.
 
+### Pourquoi l'installation repart de zéro
+
+`installCommand` vaut `rm -rf node_modules && bun install --frozen-lockfile`, et ce n'est pas un excès de prudence.
+
+Vercel restaure le `node_modules` du déploiement précédent depuis son cache de build. Une installation incrémentale par-dessus cet arbre peut y laisser des dépendances imbriquées périmées. Le symptôme observé : plusieurs versions de `zod` v4 cohabitant sous `@tanstack/*`, et un build qui échoue sur `TypeError: Cannot read properties of undefined (reading 'optin')` — un schéma créé par une copie de zod, analysé par une autre.
+
+Repartir d'un arbre vide coûte environ deux secondes (bun installe 387 paquets en moins d'une seconde) et rend le build reproductible. `--frozen-lockfile` garantit en plus que `bun.lock` est respecté à la lettre : si le lockfile et `package.json` divergent, le build échoue franchement au lieu de résoudre des versions différentes de celles testées en local.
+
 ## Netlify
 
 - `NITRO_PRESET=netlify` → sortie `.netlify/functions-internal` + `dist`
